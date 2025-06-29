@@ -6,6 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import { RoomsModule } from './rooms/rooms.module';
+import { BusinessModule } from './business/business.module';
 
 @Module({
   
@@ -13,7 +14,7 @@ import { RoomsModule } from './rooms/rooms.module';
     ConfigModule.forRoot({
       isGlobal: true, 
     }),
-   UsersModule, AuthModule, RoomsModule],
+   UsersModule, AuthModule, RoomsModule, BusinessModule],
   controllers: [AppController],
   providers: [AppService],
 })
